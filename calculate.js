@@ -7,8 +7,6 @@ function generateNumbers() {
     correctSum = num1 + num2;
     document.getElementById("num1").innerHTML = num1.toFixed(0);
     document.getElementById("num2").innerHTML = num2.toFixed(0);
-    // 这里可以添加一些代码来显示这两个数字，但题目要求只显示和  
-    // console.log(`生成的数字是: ${num1} 和 ${num2}`); // 示例  
 }
 
 function checkAnswer() {

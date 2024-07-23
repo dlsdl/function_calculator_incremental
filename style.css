@@ -1,0 +1,9 @@
+﻿html {
+    background-color: #cbd7cb;
+    color: #3a3a3a ;
+    user-select: none;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+
