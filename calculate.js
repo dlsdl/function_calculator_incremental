@@ -12,17 +12,18 @@ function generateNumbers() {
 function checkAnswer() {
     const userInput = document.getElementById('sumInput').value;
     if (userInput === '' || isNaN(userInput)) {
-        alert('请输入一个有效的数字！');
+        document.getElementById('noti').textContent = "这不是有效的数字";
         return;
     }
 
     if (parseInt(userInput) === correctSum) {
-        score++;
+        let gain = num1 + num2;
+        score = score + gain;
         document.getElementById('score').textContent = score;
-        alert('number+1');
+        document.getElementById('noti').textContent = "数字+" + gain;
         generateNumbers();
     } else {
-        alert('ERROR');
+        document.getElementById('noti').textContent = "ERROR";
     }
 
     
