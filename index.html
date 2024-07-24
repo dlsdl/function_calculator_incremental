@@ -1,19 +1,44 @@
 ﻿<!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-    <meta charset="UTF-8">
+<html>
+    <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>函数计算器增量（测试版）</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>函数计算器增量</h1>
-    <p>请输入它们的和：<span id="num1"></span>+<span id="num2"></span>=</p>
-    <input type="text" id="sumInput" placeholder="输入两个数字之和">
-    <button onclick="checkAnswer()">提交答案</button>
-    <p><span id="noti"></span></p>
-    <p>你有<span id="score">0</span>数字</p>
-    <script src="calculate.js"></script>
-    <script src="ExpantaNum.js"></script>
-</body>
+    </head>
+    <body font-family: ClassWizCWDisplay-Regular>
+        <div style="width: 20%; height: 100%; overflow-y: auto; overflow-x: hidden; position: absolute; top: 0; left: 0%; border: 1px solid black;">
+            <button class="pagebt" onclick="chpage(1)">资源</button>
+            <button class="pagebt" onclick="chpage(2)">菜单</button>
+            <button class="pagebt" onclick="chpage(3)">选项</button>
+            <div class="resource">数字：0</div>
+            <div class="resource">未知数：0(需要1e100数字)</div>
+            <div class="resource">维度：0(需要1F100未知数)</div>
+            <div class="resource">事件：0(需要1G100维度)</div>
+            <div class="resource">图形：0(需要1H100事件)</div>
+        </div>
+        <div style="width: 80%; height: 100%; overflow-y: auto; overflow-x: auto; position: absolute; top: 0; left: 20%;">
+            <p align="center" class="ftsz6">函数计算器放置<span class="ftsz2"> v0.82.0 by qeq6308</span></p>
+            <p align="center" class="ftsz4">当前模式：计算</p>
+            <p align="center" class="ftsz2">计算：<span id="num1"></span>+<span id="num2"></span>=</p>
+            <p align="center" class="ftsz2">
+                <input type="text" id="sumInput" placeholder="">
+                <button onclick="checkAnswer()">提交</button>
+            </p>
+            <p align="center" class="ftsz2"><span id="noti">无</span></p>
+            <p align="center" class="ftsz3">你有<span id="score">0</span>数字</p>
+            <table align="center">
+                <tr>
+                    <td><button align="center" class="ugbt" onclick="">upg1 lv.0/10 60数字 显示计算结果,数字×1.14</button></td>
+                    <td><button align="center" class="ugbt" onclick="">upg2 lv.0/10 240数字 自动进行计算,计算速度÷1.14</button></td>
+                    <td><button align="center" class="ugbt" onclick="">upg3 lv.0/10 1000数字 随机生成的位数+1,自动计算速度÷4</button></td>
+                    <td><button align="center" class="ugbt" onclick="">upg4 lv.0/6 10000数字 +新的运算类型</button></td>
+                </tr>
+            </table>
+        </div>
+
+
+        <script type="text/javascript" src="calculate.js"></script>
+        <script type="text/javascript" src="ExpantaNum.js"></script>
+    </body>
 </html>

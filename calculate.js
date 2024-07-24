@@ -2,8 +2,8 @@ let score = 0;
 let num1, num2, correctSum;
 
 function generateNumbers() {
-    num1 = Math.floor(Math.random() * 100) + 1;
-    num2 = Math.floor(Math.random() * 100) + 1;
+    num1 = Math.floor(Math.random() * 10) + 1;
+    num2 = Math.floor(Math.random() * 10) + 1;
     correctSum = num1 + num2;
     document.getElementById("num1").innerHTML = num1.toFixed(0);
     document.getElementById("num2").innerHTML = num2.toFixed(0);
@@ -12,18 +12,18 @@ function generateNumbers() {
 function checkAnswer() {
     const userInput = document.getElementById('sumInput').value;
     if (userInput === '' || isNaN(userInput)) {
-        document.getElementById('noti').textContent = "这不是有效的数字";
+        document.getElementById('noti').innerHTML = "ERROR";
         return;
     }
 
     if (parseInt(userInput) === correctSum) {
         let gain = num1 + num2;
         score = score + gain;
-        document.getElementById('score').textContent = score;
-        document.getElementById('noti').textContent = "数字+" + gain;
+        document.getElementById('score').innerHTML = score;
+        document.getElementById('noti').innerHTML = "+" + gain;
         generateNumbers();
     } else {
-        document.getElementById('noti').textContent = "ERROR";
+        document.getElementById('noti').innerHTML = "ERROR";
     }
 
     
