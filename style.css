@@ -11,7 +11,7 @@ html {
     touch-action: manipulation;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     font-family: ClassWizCWDisplay-Regular, fzxs12;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 button {
