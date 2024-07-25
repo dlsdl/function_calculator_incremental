@@ -7,32 +7,50 @@
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div style="width: 20%; height: 100%; overflow-y: auto; overflow-x: hidden; position: absolute; top: 0; left: 0%; border: 1px solid black;">
+        <div style="width: 20%; height: 100%; overflow-y: auto; overflow-x: hidden; position: absolute; top: 0; left: 0%; border: 2px black; border-style: none solid none none">
             <button class="pagebt" onclick="chpage(1)">资源</button>
             <button class="pagebt" onclick="chpage(2)">菜单</button>
             <button class="pagebt" onclick="chpage(3)">选项</button>
-            <div class="resource">数字：0</div>
-            <div class="resource">未知数：0(需要1e100数字)</div>
-            <div class="resource">维数：0(需要1F100未知数)</div>
-            <div class="resource">元数：0(需要1G100维数)</div>
-            <div class="resource">图形：0(需要1H100元数)</div>
+            <div id="tab1">
+                <br />
+                <div class="resource">数字：0</div>
+                <div class="resource">未知数：0(到达1e100数字以进行未知数重置)</div>
+                <div class="resource">维数：0(到达1F100未知数以进行维数重置)</div>
+                <div class="resource">元数：0(到达1G100维数以进行元数重置)</div>
+                <div class="resource">图形：0(到达1H100元数以进行图形重置)</div>
+
+            </div>
+            <div id="tab2">
+                <div class="resource">选择模式</div>
+                <div class="resource">科学常数</div>
+                <div class="resource">单位换算</div>
+                <div class="resource">元素周期表</div>
+            </div>
+            <div id="tab3">
+                <div class="resource">导出存档</div>
+                <div class="resource">导入存档</div>
+                <div class="resource">硬重置</div>
+                <div class="resource">关于</div>
+            </div>
         </div>
         <div style="width: 80%; height: 100%; overflow-y: auto; overflow-x: auto; position: absolute; top: 0; left: 20%;">
             <p align="center" class="ftsz6">函数计算器增量<span class="ftsz2"> v0.82.0 alpha-1</span></p>
             <p align="center" class="ftsz4">当前模式：计算</p>
-            <p align="center" class="ftsz2">计算：<span id="num1"></span>+<span id="num2"></span>=</p>
             <p align="center" class="ftsz2">
+                加法计算：<span id="num1"></span>+<span id="num2"></span>=
                 <input type="text" id="sumInput" placeholder="">
                 <button onclick="checkAnswer()">提交</button>
             </p>
             <p align="center" class="ftsz2"><span id="noti">无</span></p>
-            <p align="center" class="ftsz3">你有<span id="score">0</span>数字</p>
+            <p align="center" class="ftsz4">你有<span id="score">0</span>数字</p>
+            <p align="center" class="ftsz2">你通过加法获得了<span id="score1">0</span>数字</p>
+            <p align="center" class="ftsz2">数字升级</p>
             <table align="center">
                 <tr>
-                    <td><button align="center" class="ugbt" onclick="">upg1 lv.0/10 60数字 第1级显示计算结果,每级数字×1.14</button></td>
-                    <td><button align="center" class="ugbt" onclick="">upg2 lv.0/10 240数字 自动进行计算,计算速度÷1.14</button></td>
-                    <td><button align="center" class="ugbt" onclick="">upg3 lv.0/10 1000数字 随机生成的位数+1,自动计算速度÷4</button></td>
-                    <td><button align="center" class="ugbt" onclick="">upg4 lv.0/6 10000数字 +新的运算类型</button></td>
+                    <td><button align="center" class="ugbt" onclick="">Ca-u0 lv.0/100 60数字 第1级显示计算结果,每级使数字获取×1.14</button></td>
+                    <td><button align="center" class="ugbt" onclick="">Ca-u1 lv.0/100 240数字 第1级解锁自动计算,每级使计算速度÷1.14</button></td>
+                    <td><button align="center" class="ugbt" onclick="">Ca-u2 lv.0/9 1000数字 随机生成的位数+1,但自动计算速度÷4</button></td>
+                    <td><button align="center" class="ugbt" onclick="">Ca-u3 lv.0/3 10000数字 解锁新的运算类型</button></td>
                 </tr>
             </table>
         </div>
